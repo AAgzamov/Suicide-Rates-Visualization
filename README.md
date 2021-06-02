@@ -1,8 +1,16 @@
 # Team_2
 Python Data Visualization
 
+# Topic: Suicide Rate
+
 # Plan of the project
 
-1. Data regarding the amount of potable water year by year
-2. Reasons for the growth and decline of the water
-3. Possible consequences of low volume of the water for the economic situation
+1. Introduction
+  -- What is sucide. Other death causes comparison (data_vis).
+
+2. Body
+  -- Suicide rate comparison.
+  -- Suicide rate comparison of the USA and Uzbekistan (narrowed down).
+
+3. Conclusion
+   -- Advices to prevent suicide rate.
