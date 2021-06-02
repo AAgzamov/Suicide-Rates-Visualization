@@ -13,4 +13,4 @@ Python Data Visualization
   --> Suicide rate comparison of the USA and Uzbekistan (narrowed down).
 
 3. Conclusion:
-   --> Some advice on how to prevent suicide rate.
+   --> Some advice on how to decrease suicide rate.
