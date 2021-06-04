@@ -19,6 +19,7 @@ plt.xlabel('Deaths causes', fontdict = {'fontsize': 15, 'fontstyle': 'italic'})
 plt.ylabel('Percentage of deaths', fontdict = {'fontsize': 14, 'fontstyle': 'italic'})
 #plt.yticks([10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60])
 
+#plt.savefig('pic_01.png', dpi = 100)
 plt.show()
 
-#plt.savefig('pic_01.png', dpi = 100)
+
