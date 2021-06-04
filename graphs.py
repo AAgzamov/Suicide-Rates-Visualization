@@ -1,6 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# ----  ---- Graph 1 ---- ----
+# reference: https://ourworldindata.org/causes-of-death
+# The share of deaths from infectious diseases are declining; a larger share is dying from NCDs
+
 plt.figure(figsize = (7, 7), dpi = 100)
 
 labels = ['Injuries', 'Non-communicable\ndiseases', 'Communicable\ndiseases']
