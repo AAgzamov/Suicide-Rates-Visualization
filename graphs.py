@@ -77,7 +77,9 @@ data['Deaths'] = data['Deaths - Self-harm - Sex: Both - Age: All Ages (Percent)'
 data = data.drop(columns=['Deaths - Self-harm - Sex: Both - Age: All Ages (Percent)'])
 
 # Removing data rows of countries which are not Greenland, the USA, Russia, Sri Lanka, South Korea, or Uzbekistan. 
-data = data.drop(index=data[(data['Entity'] != 'Greenland') & (data['Entity'] != 'United States') & (data['Entity'] != 'Russia') & (data['Entity'] != 'Sri Lanka') & (data['Entity'] != 'South Korea') & (data['Entity'] != 'Uzbekistan')].index)
+data = data.drop(index=data[(data['Entity'] != 'Greenland') & (data['Entity'] != 'United States') & (data['Entity'] != 'Russia') & (data['Entity'] != 'Grenada') & (data['Entity'] != 'South Korea') & (data['Entity'] != 'Uzbekistan')].index)
+
+data = data.sort_values('Entity')
 
 # Locating data year by year. (If loop method is available, it is welcome)
 year_1990 = data.loc[data['Year'] == 1990]
@@ -118,7 +120,7 @@ plt.title('Share of deaths from suicide, 1990 to 2017', fontdict = {'size': 15, 
 plt.ylabel('Percentage of deaths from suicide', fontdict = {'size': 12})
 plt.xticks([1990, 1995, 2000, 2005, 2010, 2015, 2017])
 plt.yticks([2, 3, 3.5, 4, 4.5, 5, 5.5, 6, 8, 10, 12, 13, 14])
-plt.plot(x, y, '.-', label=['Greenland', 'South Korea', 'Sri Lanka', 'Russia', 'United States', 'Uzbekistan'])
+plt.plot(x, y, '.-', label=['Greenland', 'Grenada', 'Russia', 'South Korea', 'United States', 'Uzbekistan'])
 plt.legend()
 #plt.savefig('deaths-from-suicide.png', dpi = 150)
 plt.show()
