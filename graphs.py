@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 # ----  ---- Graph 1 ---- ----
 # reference: https://ourworldindata.org/causes-of-death
@@ -123,4 +124,48 @@ plt.yticks([2, 3, 3.5, 4, 4.5, 5, 5.5, 6, 8, 10, 12, 13, 14])
 plt.plot(x, y, '.-', label=['Greenland', 'Grenada', 'Russia', 'South Korea', 'United States', 'Uzbekistan'])
 plt.legend()
 #plt.savefig('deaths-from-suicide.png', dpi = 150)
+plt.show()
+
+
+# ----  ---- Graph 3 ---- ----
+# reference: https://ourworldindata.org/suicide
+# Share of deaths from suicide in Uzbekistan, United States, and Kazakhstan
+
+# Altering the data structure in the .csv file and storing it in 'info' variable.
+info = pd.read_csv('share-deaths-suicide.csv')
+info['Deaths'] = info['Deaths - Self-harm - Sex: Both - Age: All Ages (Percent)']
+info = info.drop(columns=['Deaths - Self-harm - Sex: Both - Age: All Ages (Percent)'])
+info = info.drop(index=info[(info['Entity'] != 'United States') & (info['Entity'] != 'Uzbekistan') & (info['Entity'] != 'Kazakhstan')].index)
+info = info.sort_values('Entity')
+
+# Locating data by country and removing redundant data rows in accordance with the year.
+kz = info.loc[info['Entity'] == 'Kazakhstan']
+kz = kz.sort_values('Year')
+kz = kz.drop(index=kz[(kz['Year'] != 1990) & (kz['Year'] != 2000) & (kz['Year'] != 2010) & (kz['Year'] != 2017)].index)
+
+usa = info.loc[info['Entity'] == 'United States']
+usa = usa.sort_values('Year')
+usa = usa.drop(index=usa[(usa['Year'] != 1990) & (usa['Year'] != 2000) & (usa['Year'] != 2010) & (usa['Year'] != 2017)].index)
+
+uzb = info.loc[info['Entity'] == 'Uzbekistan']
+uzb = uzb.sort_values('Year')
+uzb = uzb.drop(index=uzb[(uzb['Year'] != 1990) & (uzb['Year'] != 2000) & (uzb['Year'] != 2010) & (uzb['Year'] != 2017)].index)
+
+# Setting 'x' values for a bar chart and a 'width' value.
+years = [1990, 2000, 2010, 2017]
+x_indexes = np.arange(len(years))
+width = 0.25
+
+# Configuring a bar chart
+plt.figure(figsize = (8.5, 5))
+plt.title('Deaths from suicide in Uzbekistan, United States, and Kazakhstan, 1990 to 2017')
+plt.xticks(ticks = x_indexes, labels = years)
+plt.ylabel('Percentage')
+
+plt.bar(x_indexes, usa.Deaths, width = width, label = 'the USA')
+plt.bar(x_indexes - width, uzb.Deaths, width = width, label = 'Uzbekistan')
+plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan')
+
+plt.legend()
+#plt.savefig('uzb-us-kz-deaths.png')
 plt.show()
