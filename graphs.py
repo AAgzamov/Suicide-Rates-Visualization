@@ -169,3 +169,44 @@ plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan')
 plt.legend()
 #plt.savefig('uzb-us-kz-deaths.png')
 plt.show()
+
+
+# ----  ---- Graph 4 ---- ----
+# reference: https://ourworldindata.org/causes-of-death
+# Suicide rates by age in Uzbekistan, 1990 and 2017
+
+# Reading a data set from .csv file and storing it in 'data' variable.
+data = pd.read_csv('suicide-rates-by-age-detailed.csv')
+
+# Configuring columns of the data set.
+data['5-14 years'] = data['Deaths - Self-harm - Sex: Both - Age: 5-14 years (Rate)']
+data['15-49 years'] = data['Deaths - Self-harm - Sex: Both - Age: 15-49 years (Rate)']
+data['50-69 years'] = data['Deaths - Self-harm - Sex: Both - Age: 50-69 years (Rate)']
+data['70+ years'] = data['Deaths - Self-harm - Sex: Both - Age: 70+ years (Rate)']
+
+data = data.drop(columns = ['Deaths - Self-harm - Sex: Both - Age: 15-49 years (Rate)', 'Deaths - Self-harm - Sex: Both - Age: 70+ years (Rate)', 'Deaths - Self-harm - Sex: Both - Age: 50-69 years (Rate)', 'Deaths - Self-harm - Sex: Both - Age: 5-14 years (Rate)'])
+data = data.drop(columns = ['Deaths - Self-harm - Sex: Both - Age: All Ages (Rate)', 'Code'])
+
+data = data.drop(index=data[data['Entity'] != 'Uzbekistan'].index)
+y_1990 = data.drop(index=data[data['Year'] != 1990].index)
+y_2017 = data.drop(index=data[data['Year'] != 2017].index)
+
+# Creating a subplot of horizontal bar charts with the dimension of 2 rows and 1 column.
+# Suicide rates are the number of deaths per suicide measured per 100,000 individuals in a given demographic.
+fig, axs = plt.subplots(2, 1, figsize=(13, 6), sharex=True) # 'sharex=True' is responsible for sharing 'xticks'
+
+objects = ['5-14 years', '15-49 years', '50-69 years', '70+ years']
+rate_1990 = [float(y_1990['5-14 years']), float(y_1990['15-49 years']), float(y_1990['50-69 years']), float(y_1990['70+ years'])]
+rate_2017 = [float(y_2017['5-14 years']), float(y_2017['15-49 years']), float(y_2017['50-69 years']), float(y_2017['70+ years'])]
+
+# The first bar chart
+axs[0].set_title('Suicide rates by age in Uzbekistan, 1990')
+axs[0].set_xticks(np.array(range(16)))
+axs[0].barh(objects, rate_1990)
+
+# The second bar chart
+axs[1].set_title('Suicide rates by age in Uzbekistan, 2017')
+axs[1].barh(objects, rate_2017)
+
+#plt.savefig('suicide-rates-by-age-uzb.png')
+plt.show()
