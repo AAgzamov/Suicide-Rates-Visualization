@@ -214,7 +214,28 @@ plt.show()
 
 # ----  ---- Graph 5 ---- ----
 # reference: https://www.nimh.nih.gov/health/statistics/suicide
-# Percentage of suicide deaths by method in the USA, 2019
+# Percentage of suicide deaths of male by method in the USA, 2019
+
+# Setting a style sheet.
+plt.style.use('fivethirtyeight')
+
+slices = [55.6, 28.4, 8.2, 7.8]
+labels = ['Firearm', 'Poisoning', 'Suffocation', 'Other']
+explode = [0.17, 0, 0, 0] # explodes out a 'Firearm' slice.
+wedgeprops = {'edgecolor': 'black'}
+
+# Plotting a pie chart.
+plt.figure(figsize = (10, 6))
+plt.title('Percentage of suicide deaths of male by method in the USA, 2019')
+plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
+
+#plt.savefig('suicide-by-method-m-usa.png')
+plt.show()
+
+
+# ----  ---- Graph 6 ---- ----
+# reference: https://www.nimh.nih.gov/health/statistics/suicide
+# Percentage of suicide deaths of female by method in the USA, 2019
 
 # Setting a style sheet.
 plt.style.use('fivethirtyeight')
@@ -229,5 +250,5 @@ plt.figure(figsize = (10, 6))
 plt.title('Percentage of suicide deaths by method in the USA, 2019')
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
 
-#plt.savefig('suicide-by-method-usa.png')
+#plt.savefig('suicide-by-method-f-usa.png')
 plt.show()
