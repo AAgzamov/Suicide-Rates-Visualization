@@ -11,7 +11,8 @@ Python Data Visualization
 2. Body:
   --> Suicide rate comparison.
   --> Suicide rate comparison of the USA and Uzbekistan (narrowed down).
-  --> Suicide rate age by age
+  --> Suicide rate age
+  --> Suicide rate by sex
   --> What has already been done to prevent suicide 
 
 
