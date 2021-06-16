@@ -210,3 +210,24 @@ axs[1].barh(objects, rate_2017)
 
 #plt.savefig('suicide-rates-by-age-uzb.png')
 plt.show()
+
+
+# ----  ---- Graph 5 ---- ----
+# reference: https://www.nimh.nih.gov/health/statistics/suicide
+# Percentage of suicide deaths by method in the USA, 2019
+
+# Setting a style sheet.
+plt.style.use('fivethirtyeight')
+
+slices = [31.4, 30.0, 29.0, 9.6]
+labels = ['Firearm', 'Poisoning', 'Suffocation', 'Other']
+explode = [0.17, 0, 0, 0] # explodes out a 'Firearm' slice.
+wedgeprops = {'edgecolor': 'black'}
+
+# Plotting a pie chart.
+plt.figure(figsize = (10, 6))
+plt.title('Percentage of suicide deaths by method in the USA, 2019')
+plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
+
+#plt.savefig('suicide-by-method-usa.png')
+plt.show()
