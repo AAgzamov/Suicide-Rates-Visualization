@@ -1,13 +1,13 @@
-# Team_2
-Python Data Visualization
+# Python Data Visualization Project
+
 
 # Topic: Suicide Rate
 
 # Plan of the project
 
 ### 1. Introduction:
-   1. What is sucide **info**.
-   2. Death causes comparison **graph**.
+   - What is sucide **info**.
+   - Death causes comparison **graph**.
 
 ### 2. Body:
    - General suicide rate comparison among several countries **graph**.
@@ -17,4 +17,4 @@ Python Data Visualization
    - What has already been done to prevent suicide **info**. 
 
 ### 3. Conclusion:
-   1.Ways of decreasing suicide rate **info**.
+   - Ways of decreasing suicide rate **info**.
