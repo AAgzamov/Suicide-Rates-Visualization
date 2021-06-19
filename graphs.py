@@ -73,6 +73,9 @@ plt.show()
 # reference: https://ourworldindata.org/suicide
 # Share of deaths from suicide
 
+# Setting a style sheet.
+plt.style.use('seaborn')
+
 # Importing information from .csv file to a variable 'data'.
 data = pd.read_csv('share-deaths-suicide.csv')
 
@@ -121,12 +124,12 @@ y = [year_1990.Deaths, year_1991.Deaths, year_1992.Deaths, year_1993.Deaths, yea
 
 plt.figure(figsize = (10, 6))
 plt.title('Share of deaths from suicide, 1990 to 2017', fontdict = {'size': 15, 'weight': 'bold'})
-plt.ylabel('Percentage of deaths from suicide', fontdict = {'size': 12})
+plt.ylabel('Percentage of deaths from suicide', fontdict = {'size': 12, 'fontstyle': 'italic'})
 plt.xticks([1990, 1995, 2000, 2005, 2010, 2015, 2017])
-plt.yticks([2, 3, 3.5, 4, 4.5, 5, 5.5, 6, 8, 10, 12, 13, 14])
-plt.plot(x, y, '.-', label=['Greenland', 'Grenada', 'Russia', 'South Korea', 'United States', 'Uzbekistan'])
-plt.legend()
-#plt.savefig('deaths-from-suicide.png', dpi = 150)
+plt.yticks([0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14])
+plt.plot(x, y, '.-')
+plt.legend(["Greenland", "Grenada", "Russia", "South Korea", "United States", "Uzbekistan"])
+plt.savefig('deaths-from-suicide.png', dpi = 200)
 plt.show()
 
 
