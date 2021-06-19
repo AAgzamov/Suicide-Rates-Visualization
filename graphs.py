@@ -26,7 +26,7 @@ l_2017 = ['Injuries', 'Non-communicable\ndiseases', 'Communicable\ndiseases']
 p_2017 = [8, 73, 19]
 
 # Creating a figure with dimension of 2 rows and 2 columns for subplotting.
-fig, axs = plt.subplots(2, 2, figsize = (11, 9), facecolor='#f2f2f2')
+fig, axs = plt.subplots(2, 2, figsize = (11, 9))
 
 # Creating a bar chart with the label and percentage of 1990 and storing it in variable 'bars_1990'.
 bars_1990 = axs[0, 0].bar(l_1990, p_1990, width = 0.4, color = ['#bddb35', '#2de04b', '#265dd4'], edgecolor = 'black', linewidth = 1.5)
