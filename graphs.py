@@ -25,6 +25,7 @@ p_2010 = [9, 67, 24]
 l_2017 = ['Injuries', 'Non-communicable\ndiseases', 'Communicable\ndiseases']
 p_2017 = [8, 73, 19]
 
+# Plotting a set of bar charts.
 # Creating a figure with dimension of 2 rows and 2 columns for subplotting.
 fig, axs = plt.subplots(2, 2, figsize = (11, 9))
 
@@ -118,7 +119,7 @@ year_2015 = data.loc[data['Year'] == 2015]
 year_2016 = data.loc[data['Year'] == 2016]
 year_2017 = data.loc[data['Year'] == 2017]
 
-# Start plotting a graph.
+# Plotting a line graph.
 x = [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
 y = [year_1990.Deaths, year_1991.Deaths, year_1992.Deaths, year_1993.Deaths, year_1994.Deaths, year_1995.Deaths, year_1996.Deaths, year_1997.Deaths, year_1998.Deaths, year_1999.Deaths, year_2000.Deaths, year_2001.Deaths, year_2002.Deaths, year_2003.Deaths, year_2004.Deaths, year_2005.Deaths, year_2006.Deaths, year_2007.Deaths, year_2008.Deaths, year_2009.Deaths, year_2010.Deaths, year_2011.Deaths, year_2012.Deaths, year_2013.Deaths, year_2014.Deaths, year_2015.Deaths, year_2016.Deaths, year_2017.Deaths]
 
@@ -136,6 +137,9 @@ plt.show()
 # ----  ---- Graph 3 ---- ----
 # reference: https://ourworldindata.org/suicide
 # Share of deaths from suicide in Uzbekistan, United States, and Kazakhstan
+
+# Setting a style sheet.
+plt.style.use('seaborn')
 
 # Altering the data structure in the .csv file and storing it in 'info' variable.
 info = pd.read_csv('share-deaths-suicide.csv')
@@ -162,18 +166,18 @@ years = [1990, 2000, 2010, 2017]
 x_indexes = np.arange(len(years))
 width = 0.25
 
-# Configuring a bar chart
+# Plotting a bar chart. 
 plt.figure(figsize = (8.5, 5))
-plt.title('Deaths from suicide in Uzbekistan, United States, and Kazakhstan, 1990 to 2017')
+plt.title('Deaths from suicide in Uzbekistan, United States, and Kazakhstan, 1990 to 2017', fontdict = {'fontsize': 13})
 plt.xticks(ticks = x_indexes, labels = years)
-plt.ylabel('Percentage')
+plt.ylabel('Percentage of deaths from suicide', fontdict = {'fontsize': 13, 'fontstyle': 'italic'})
 
-plt.bar(x_indexes, usa.Deaths, width = width, label = 'the USA')
-plt.bar(x_indexes - width, uzb.Deaths, width = width, label = 'Uzbekistan')
-plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan')
+plt.bar(x_indexes, usa.Deaths, width = width, label = 'the USA', edgecolor = 'black', linewidth = 1.1)
+plt.bar(x_indexes - width, uzb.Deaths, width = width, label = 'Uzbekistan', edgecolor = 'black', linewidth = 1.1)
+plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan', edgecolor = 'black', linewidth = 1.1)
 
 plt.legend()
-#plt.savefig('uzb-us-kz-deaths.png')
+plt.savefig('uzb-us-kz-deaths.png', dpi = 200)
 plt.show()
 
 
