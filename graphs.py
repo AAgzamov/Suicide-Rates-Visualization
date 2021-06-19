@@ -185,6 +185,9 @@ plt.show()
 # reference: https://ourworldindata.org/causes-of-death
 # Suicide rates by age in Uzbekistan, 1990 and 2017
 
+# Setting a style sheet.
+plt.style.use('seaborn')
+
 # Reading a data set from .csv file and storing it in 'data' variable.
 data = pd.read_csv('suicide-rates-by-age-detailed.csv')
 
@@ -212,13 +215,16 @@ rate_2017 = [float(y_2017['5-14 years']), float(y_2017['15-49 years']), float(y_
 # The first bar chart
 axs[0].set_title('Suicide rates by age in Uzbekistan, 1990')
 axs[0].set_xticks(np.array(range(16)))
-axs[0].barh(objects, rate_1990)
+bar_1 = axs[0].barh(objects, rate_1990, edgecolor = 'black', linewidth = 1.1)
+bar_1[2].set_hatch('//')
 
 # The second bar chart
 axs[1].set_title('Suicide rates by age in Uzbekistan, 2017')
-axs[1].barh(objects, rate_2017)
+axs[1].set_xlabel('Number of deaths', fontdict = {'fontstyle': 'italic', 'fontsize': 14})
+bar_2 = axs[1].barh(objects, rate_2017, edgecolor = 'black', linewidth = 1.1)
+bar_2[1].set_hatch('//')
 
-#plt.savefig('suicide-rates-by-age-uzb.png')
+plt.savefig('suicide-rates-by-age-uzb.png', dpi = 200)
 plt.show()
 
 
