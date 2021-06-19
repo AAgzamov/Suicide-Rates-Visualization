@@ -233,7 +233,7 @@ plt.show()
 # Percentage of suicide deaths of male by method in the USA, 2019
 
 # Setting a style sheet.
-plt.style.use('fivethirtyeight')
+plt.style.use('seaborn')
 
 slices = [55.6, 28.4, 8.2, 7.8]
 labels = ['Firearm', 'Poisoning', 'Suffocation', 'Other']
@@ -242,10 +242,10 @@ wedgeprops = {'edgecolor': 'black'}
 
 # Plotting a pie chart.
 plt.figure(figsize = (10, 6))
-plt.title('Percentage of suicide deaths of male by method in the USA, 2019')
+plt.title('Percentage of suicide deaths of male by method in the USA, 2019', fontdict = {'fontsize': 15})
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
 
-#plt.savefig('suicide-by-method-m-usa.png')
+plt.savefig('suicide-by-method-m-usa.png', dpi = 200)
 plt.show()
 
 
