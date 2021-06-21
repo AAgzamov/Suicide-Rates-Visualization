@@ -25,8 +25,11 @@ The project is dived into three parts. These are **Introduction**, **Body**, and
 
 ### 1. Introduction:
    - **What is suicide?**
-    Suicide is
-   - Death causes comparison **graph**.
+    Suicide is the act of intentionally causing one's own death.
+    According to https://www.cdc.gov/suicide/facts/index.html, suicide is the 10th leading cause of death in the United States. It was responsible for more than 47,500 deaths in 2019, which is about one death every 11 minutes. The number of people who think about or attempt suicide is even higher. In 2019, 12 million American adults seriously thought about suicide, 3.5 million planned a suicide attempt, and 1.4 million attempted suicide.
+   
+   - **Deaths by cause in the world, 1990 to 2017**.
+    **Graph 1** illustrates the the share of deaths from injuries, communicable diseases, and non-communicable diseases. Injuries include road accidents, homicides, conflict deaths, drowning, fire-related accidents, natural disasters and suicides. Non-communicable diseases are chronic, long-term illnesses, and communicable diseases are infectious diseases.
 
 ### 2. Body:
    - General suicide rate comparison among several countries **graph**.
