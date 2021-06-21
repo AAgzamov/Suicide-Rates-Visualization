@@ -1,4 +1,4 @@
-# Data Visualization utilizng Python programming language.
+# Data Visualization utilizing Python programming language.
 
 This repository is a course project on completing an American Center Tashkent Python Data Visualization Course.
 The topic of the project is Suicide Rates Comparison.
@@ -12,7 +12,7 @@ The visualization is done thanks to the 'matplotlib', 'pandas', 'numpy' Python m
 In order to understand the project, you will need to have the graphs on your machine and refer to the README.md file to know what each of the graphs depicts.
 
 Follow the steps:
-1. Download the repository in your machine. You can do that either using GUI or running the 'git clone https://github.com/AAgzamov/Team2_SuicideRates.git' command in your shell.
+1. Download the repository in your machine. You can do that either using GUI or running the ```git clone https://github.com/AAgzamov/Team2_SuicideRates.git``` command in your shell.
 2. Run the 'graphs.py' file on your machine.
 You will need Pyhton installed on your machine to run the 'graphs.py' file. If you do not have it, you can download it from https://www.python.org/.
 3. Once you have run the 'graphs.py' successfully, several graphs (in PNG files) will appear in the same directory where the 'graphs.py' located.
