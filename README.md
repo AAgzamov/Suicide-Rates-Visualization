@@ -12,7 +12,7 @@ The visualization is done thanks to the *matplotlib*, *pandas*, and *numpy* Pyth
 In order to understand the project, you will need to have the graphs on your machine and refer to the *README.md* file to know what each of the graphs depicts.
 
 Follow the steps:
-1. Download the repository in your machine. You can do that either using GUI or running the ```git clone https://github.com/AAgzamov/Team2_SuicideRates.git``` command in your terminal.
+1. Download the repository in your machine. You can do that either using GUI or running the ```git clone https://github.com/AAgzamov/Suicide-Rates-Visualization.git``` command in your terminal.
 2. Run the *graphs.py* file on your machine.
 You will need Pyhton installed on your machine to run the *graphs.py* file. If you do not have it, you can download it [here](https://www.python.org/).
 3. To execute *graphs.py* you will need to install packages (matplotlib, pandas, numpy). You can do that running ```pip3 install matpotlib```, then ```pip3 install pandas```, and finally ```pip3 install numpy``` in your terminal.
