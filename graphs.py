@@ -67,7 +67,7 @@ for ax in axs.flat:
 fig.tight_layout(pad = 6.0)
 
 plt.savefig('deaths-by-cause-world.png', dpi = 200)
-plt.show()
+#plt.show()
 
 
 # ----  ---- Graph 2 ---- ----
@@ -131,12 +131,12 @@ plt.yticks([0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5,
 plt.plot(x, y, '.-')
 plt.legend(["Greenland", "Grenada", "Russia", "South Korea", "United States", "Uzbekistan"])
 plt.savefig('deaths-from-suicide.png', dpi = 200)
-plt.show()
+#plt.show()
 
 
 # ----  ---- Graph 3 ---- ----
 # reference: https://ourworldindata.org/suicide
-# Share of deaths from suicide in Uzbekistan, United States, and Kazakhstan
+# Narrowed down suicide rate comparison
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -178,11 +178,11 @@ plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan', edgec
 
 plt.legend()
 plt.savefig('uzb-us-kz-deaths.png', dpi = 200)
-plt.show()
+#plt.show()
 
 
 # ----  ---- Graph 4 ---- ----
-# reference: https://ourworldindata.org/causes-of-death
+# reference: https://ourworldindata.org/suicide
 # Suicide rates by age in Uzbekistan, 1990 and 2017
 
 # Setting a style sheet.
@@ -225,7 +225,7 @@ bar_2 = axs[1].barh(objects, rate_2017, edgecolor = 'black', linewidth = 1.1)
 bar_2[1].set_hatch('//')
 
 plt.savefig('suicide-rates-by-age-uzb.png', dpi = 200)
-plt.show()
+#plt.show()
 
 
 # ----  ---- Graph 5 ---- ----
@@ -246,7 +246,7 @@ plt.title('Percentage of suicide deaths of male by method in the USA, 2019', fon
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
 
 plt.savefig('suicide-by-method-m-usa.png', dpi = 200)
-plt.show()
+#plt.show()
 
 
 # ----  ---- Graph 6 ---- ----
@@ -267,4 +267,4 @@ plt.title('Percentage of suicide deaths of female by method in the USA, 2019', f
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
 
 plt.savefig('suicide-by-method-f-usa.png', dpi = 200)
-plt.show()
+#plt.show()
