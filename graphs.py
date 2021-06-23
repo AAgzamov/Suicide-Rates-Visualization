@@ -2,16 +2,16 @@ try:
     import matplotlib.pyplot as plt
     import pandas as pd
     import numpy as np
-    print("\033[1;32;40m[+] \033[1;37;40mModules are imported successfully!\n")
+    print("[+] Modules are imported successfully!\n")
 except:
-    print('\033[1;31;40m[Error]: \033[1;37;40mCannot import modules!')
+    print('[Error]: Cannot import modules!')
 
 
 # ----  ---- Graph 1 ---- ----
 # reference: https://ourworldindata.org/causes-of-death
 # The share of deaths from injuries, infectious diseases, and non-communicable diseases
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 1\'...', end=' ')
+print('[+] Plotting \'Graph 1\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -72,10 +72,10 @@ for ax in axs.flat:
 
 # Setting the space between each bar chart.
 fig.tight_layout(pad = 6.0)
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('deaths-by-cause-world.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 1\' in "deaths-by-cause-world.png" successfully!\n')
+print('[+] Saved \'Graph 1\' in "deaths-by-cause-world.png" successfully!\n')
 #plt.show()
 
 
@@ -83,7 +83,7 @@ print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 1\' in "deaths-by-cause-world
 # reference: https://ourworldindata.org/suicide
 # Share of deaths from suicide
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 2\'...', end=' ')
+print('[+] Plotting \'Graph 2\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -141,10 +141,10 @@ plt.xticks([1990, 1995, 2000, 2005, 2010, 2015, 2017])
 plt.yticks([0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14])
 plt.plot(x, y, '.-')
 plt.legend(["Greenland", "Grenada", "Russia", "South Korea", "United States", "Uzbekistan"])
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('deaths-from-suicide.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 2\' in "deaths-from-suicide.png" successfully!\n')
+print('[+] Saved \'Graph 2\' in "deaths-from-suicide.png" successfully!\n')
 #plt.show()
 
 
@@ -152,7 +152,7 @@ print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 2\' in "deaths-from-suicide.p
 # reference: https://ourworldindata.org/suicide
 # Narrowed down suicide rate comparison
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 3\'...', end=' ')
+print('[+] Plotting \'Graph 3\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -193,10 +193,10 @@ plt.bar(x_indexes - width, uzb.Deaths, width = width, label = 'Uzbekistan', edge
 plt.bar(x_indexes + width, kz.Deaths, width = width, label = 'Kazakhstan', edgecolor = 'black', linewidth = 1.1)
 
 plt.legend()
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('uzb-us-kz-deaths.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 3\' in "uzb-us-kz-deaths.png" successfully!\n')
+print('[+] Saved \'Graph 3\' in "uzb-us-kz-deaths.png" successfully!\n')
 #plt.show()
 
 
@@ -204,7 +204,7 @@ print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 3\' in "uzb-us-kz-deaths.png"
 # reference: https://ourworldindata.org/suicide
 # Suicide rates by age in Uzbekistan, 1990 and 2017
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 4\'...', end=' ')
+print('[+] Plotting \'Graph 4\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -244,10 +244,10 @@ axs[1].set_title('Suicide rates by age in Uzbekistan, 2017')
 axs[1].set_xlabel('Number of deaths', fontdict = {'fontstyle': 'italic', 'fontsize': 14})
 bar_2 = axs[1].barh(objects, rate_2017, edgecolor = 'black', linewidth = 1.1)
 bar_2[1].set_hatch('//')
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('suicide-rates-by-age-uzb.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 4\' in "suicide-rates-by-age-uzb.png" successfully!\n')
+print('[+] Saved \'Graph 4\' in "suicide-rates-by-age-uzb.png" successfully!\n')
 #plt.show()
 
 
@@ -255,7 +255,7 @@ print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 4\' in "suicide-rates-by-age-
 # reference: https://www.nimh.nih.gov/health/statistics/suicide
 # Percentage of suicide deaths of male by method in the USA, 2019
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 5\'...', end=' ')
+print('[+] Plotting \'Graph 5\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -269,10 +269,10 @@ wedgeprops = {'edgecolor': 'black', 'linewidth': 1.5}
 plt.figure(figsize = (10, 6))
 plt.title('Percentage of suicide deaths of male by method in the USA, 2019', fontdict = {'fontsize': 15, 'fontweight': 'bold'})
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('suicide-by-method-m-usa.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 5\' in "suicide-by-method-m-usa.png" successfully!\n')
+print('[+] Saved \'Graph 5\' in "suicide-by-method-m-usa.png" successfully!\n')
 #plt.show()
 
 
@@ -280,7 +280,7 @@ print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 5\' in "suicide-by-method-m-u
 # reference: https://www.nimh.nih.gov/health/statistics/suicide
 # Percentage of suicide deaths of female by method in the USA, 2019
 
-print('\033[1;32;40m[+] \033[1;37;40mPlotting \'Graph 6\'...', end=' ')
+print('[+] Plotting \'Graph 6\'...', end=' ')
 
 # Setting a style sheet.
 plt.style.use('seaborn')
@@ -294,11 +294,11 @@ wedgeprops = {'edgecolor': 'black', 'linewidth': 1.5}
 plt.figure(figsize = (10, 6))
 plt.title('Percentage of suicide deaths of female by method in the USA, 2019', fontdict = {'fontsize': 15, 'fontweight': 'bold'})
 plt.pie(slices, labels=labels, wedgeprops=wedgeprops, explode=explode, shadow=1, startangle=90, autopct='%1.1f%%')
-print('\033[1;37;40mDone!')
+print('Done!')
 
 plt.savefig('suicide-by-method-f-usa.png', dpi = 200)
-print('\033[1;32;40m[+] \033[1;37;40mSaved \'Graph 6\' in "suicide-by-method-f-usa.png" successfully!\n')
+print('[+] Saved \'Graph 6\' in "suicide-by-method-f-usa.png" successfully!\n')
 #plt.show()
 
-print('\033[1;32;40m[+] \033[1;37;40mThe script is executed successfully!')
+print('[+] The script is executed successfully!')
 input()
