@@ -4,7 +4,7 @@ try:
     import numpy as np
     print("\033[1;32;40m[+] \033[1;37;40mModules are imported successfully!\n")
 except:
-    print('\033[1;31[Error]: \033[1;37Cannot import modules!')
+    print('\033[1;31;40m[Error]: \033[1;37;40mCannot import modules!')
 
 
 # ----  ---- Graph 1 ---- ----
