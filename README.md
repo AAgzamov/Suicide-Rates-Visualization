@@ -18,7 +18,7 @@ You will need Pyhton installed on your machine to run the *graphs.py* file. If y
 3. To execute *graphs.py* you will need to install packages (matplotlib, pandas, numpy). You can do that running ```pip3 install matpotlib```, then ```pip3 install pandas```, and finally ```pip3 install numpy``` in your terminal.
 4. Once you have executed the *graphs.py* successfully, several graphs (in PNG files) will appear in the same directory where the *graphs.py* located.
 
-Now, you can go over the grpahs and refer to the *README.md* file to understand what the graphs illustrate.
+Now, you can go over the graphs and refer to the *README.md* file to understand what the graphs illustrate.
 
 # Plan of the project
 
