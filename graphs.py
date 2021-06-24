@@ -1,11 +1,14 @@
 try:
+    import sys
     import matplotlib.pyplot as plt
     import pandas as pd
     import numpy as np
     print("[+] Modules are imported successfully!\n")
+
 except:
     print('[Error]: Cannot import modules!')
-
+    sys.exit()
+    
 
 # ----  ---- Graph 1 ---- ----
 # reference: https://ourworldindata.org/causes-of-death
