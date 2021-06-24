@@ -7,6 +7,7 @@ try:
 
 except:
     print('[Error]: Cannot import modules!')
+    input()
     sys.exit()
     
 
