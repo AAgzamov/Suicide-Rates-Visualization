@@ -7,6 +7,8 @@ This repository consists of the *README.md* file, a Python file with the scripts
 
 The visualization is done thanks to the *matplotlib*, *pandas*, and *numpy* Python modules.
 
+[View repository walkthrough video.](https://youtu.be/a67qgemaZkE)
+
 # Instruction
 
 In order to understand the project, you will need to have the graphs on your machine and refer to the *README.md* file to know what each of the graphs depicts.
